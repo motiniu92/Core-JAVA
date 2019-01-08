@@ -1,0 +1,28 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.coderbd;
+
+/**
+ *
+ * @author User
+ */
+public class AccessModifiersEx {
+    private int privateVar = 5000;
+    int defaultVar = 1000;
+    protected int protectedVar = 500;
+    public int publicVar = 100;
+    
+    
+    public static void main(String[] args) {
+      AccessModifiersEx obj = new AccessModifiersEx();
+        
+        System.out.println(obj.privateVar);
+        System.out.println(obj.defaultVar);
+        System.out.println(obj.protectedVar);
+        System.out.println(obj.publicVar);
+    }
+    
+}
