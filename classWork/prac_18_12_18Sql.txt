@@ -1,0 +1,63 @@
+==================Create table=========================
+ create table emp(id number(5), name varchar2(40), salary
+ 
+ number(8,2), hire_date date, address varchar2(40));
+ 
+ 
+ =========Set primary key============
+ alter table emp add constraint emp_id_pk primary key(id);
+ 
+ 
+ 
+ =========insert data==============
+ insert into emp(id, name, salary, hire_date, address)
+ 
+ values (&id, '&name', '&salary', '&hire_date', '&address');
+ 
+ 
+ 
+ ============Add column===============
+ alter table emp add(phone number(11), job_title varchar2(40));
+ 
+ 
+ 
+ ===========Salary 30%================
+ select name, job_title, salary, salary+(salary*.30) as
+ 
+ review_salary FROM emp;
+ 
+ 
+ 
+ ==============Min salary============
+ select name, salary FROM emp Where salary =(select MIN(salary) FROM emp);
+ 
+ 
+ 
+ =========Update column==========
+ update emp set job_title='Manager';
+ 
+ 
+ ============Create view==============
+ create view v_emp as select name, job_title, salary, 
+ 
+ salary+(salary*.30) as review_salary FROM emp;
+ 
+ 
+ 
+ ==============Create Sequence================
+ create sequence id_seq increment by 100 start with 
+ maxvalue 1000000 nocache nocycle;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
